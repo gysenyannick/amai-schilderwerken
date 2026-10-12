@@ -115,8 +115,11 @@ h2 sup { font-size: .3em; vertical-align: super; letter-spacing: 0; }
 .nav__links .nav__sub a:hover { background: var(--accent); }
 .nav__cta-mobile { display: none; }
 .nav__right { display: flex; align-items: center; gap: 18px; }
-.nav__tel { display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; border-radius: 999px; border: 1.5px solid var(--ink); font-weight: 600; font-size: .92rem; transition: background .25s, color .25s; }
-.nav__tel:hover { background: var(--ink); color: #fff; }
+/* bellen: geel rond icoon met "Bel ons"; het icoon rinkelt bij aanwijzen */
+.nav__tel { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; font-size: .94rem; }
+.nav__tel i { width: 38px; height: 38px; border-radius: 50%; background: var(--accent); display: grid; place-items: center; transition: transform .3s var(--ease); }
+.nav__tel:hover i { animation: telRing .6s var(--ease); }
+@keyframes telRing { 20% { transform: rotate(-16deg); } 40% { transform: rotate(14deg); } 60% { transform: rotate(-10deg); } 80% { transform: rotate(6deg); } }
 .burger { display: none; width: 46px; height: 46px; border-radius: 50%; border: 1.5px solid currentColor; background: none; color: inherit; cursor: pointer; position: relative; }
 .burger span { position: absolute; left: 13px; right: 13px; height: 2px; background: currentColor; transition: transform .3s var(--ease), top .3s var(--ease); }
 .burger span:first-child { top: 18px; }
