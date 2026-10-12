@@ -74,6 +74,9 @@
     });
   }));
 
+  // Menu: een dienst kiezen opent meteen het juiste fotopaneel
+  $$('[data-dienst]').forEach((link) => link.addEventListener('click', () => openAcc(accItems[Number(link.dataset.dienst)])));
+
   // Uitklaplijsten (Amai Factor en FAQ): per lijst één tegelijk open
   ['.afx__list', '.faq__list'].forEach((sel) => {
     const group = $$(`${sel} details`);

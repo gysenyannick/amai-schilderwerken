@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=41">
+  <link rel="stylesheet" href="styles.css?v=48">
 </head>
 <body>
   <a class="skip" href="#main">Naar de inhoud</a>
@@ -26,14 +26,21 @@
         <img class="logo__img" src="logo-mark.png" alt="Amai!" width="600" height="332">
       </a>
       <nav class="nav__links" id="menu" aria-label="Hoofdnavigatie">
-        <a href="#factor">De AMAI Factor</a>
-        <a href="#diensten">Diensten</a>
-        <a href="#werkwijze">Werkwijze</a>
-        <a href="#faq">FAQ</a>
+        <div class="nav__drop">
+          <a class="nav__drop-top" href="#diensten" aria-haspopup="true">Diensten <svg viewBox="0 0 12 12" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg></a>
+          <div class="nav__sub">
+            <a href="#diensten" data-dienst="0">Binnenschilderwerk</a>
+            <a href="#diensten" data-dienst="1">Buitenschilderwerk</a>
+            <a href="#diensten" data-dienst="2">Kaleien</a>
+            <a href="#diensten" data-dienst="3">Decoratieve technieken</a>
+          </div>
+        </div>
+        <a href="#werkwijze">Hoe het werkt</a>
+        <a href="#realisaties">Realisaties</a>
         <a class="btn btn--accent nav__cta-mobile" href="#offerte">Gratis offerte</a>
       </nav>
       <div class="nav__right">
-        <a class="nav__tel" href="tel:+32000000000">+32 000 00 00 00</a>
+        <a class="nav__tel" href="tel:+32468352869">0468 35 28 69</a>
         <a class="btn btn--ink btn--sm" href="#offerte">Gratis offerte <span aria-hidden="true">→</span></a>
         <button class="burger" id="burger" aria-label="Menu openen" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
       </div>
@@ -71,54 +78,45 @@
         <p class="reveal">Offertes die nooit komen, schilders die niet opdagen, verfspatten op de vloer of een afwerking die «goed genoeg» moet zijn. Herkenbaar?</p>
       </div>
       <div class="factor__diff">
-        <div class="wrap">
-          <div class="factor__top">
-            <div>
-              <p class="eyebrow reveal">Wij doen het anders</p>
-              <h2 class="reveal factor__title">De <span class="factor__logo"><img src="logo-mark.png" alt="AMAI"></span> <span>Factor<sup>™</sup></span></h2>
-            </div>
-            <p class="factor__lead reveal">Vijf vaste afspraken die we bij elk project nakomen, van je eerste bericht tot de laatste penseelstreek. Klik op een afspraak om te lezen wat ze voor jou betekent.</p>
+        <div class="wrap factor__layout">
+          <div class="factor__side">
+            <p class="eyebrow reveal">Wij doen het anders</p>
+            <h2 class="reveal factor__title">De <span class="factor__logo"><img src="logo-mark.png" alt="AMAI"></span> <span>Factor<sup>™</sup></span></h2>
+            <p class="factor__lead reveal">Vijf vaste afspraken die we bij elk project nakomen, van je eerste bericht tot de laatste penseelstreek.</p>
+            <a class="btn btn--ink btn--lg reveal" href="#offerte">Vraag je gratis offerte <span aria-hidden="true">→</span></a>
           </div>
           <ol class="factor__list">
             <li class="factor__row reveal">
-              <span class="factor__nr">01</span>
               <h3><em>Amai,</em> die reageren snel.</h3>
               <div class="factor__more"><p>Je aanvraag blijft niet liggen: binnen de 24 uur nemen we contact op en plannen we een plaatsbezoek. Ook je offerte volgt binnen de 24 uur na ons bezoek, zonder dat je erachteraan moet bellen.</p></div>
               <span class="tag">Reactie binnen 24u</span>
               <button class="factor__toggle" type="button" aria-expanded="false" aria-label="Meer lezen"></button>
             </li>
             <li class="factor__row reveal">
-              <span class="factor__nr">02</span>
               <h3><em>Amai,</em> die zijn professioneel.</h3>
               <div class="factor__more"><p>We starten op de afgesproken dag en komen op het afgesproken uur. Je krijgt een vaste ploeg in verzorgde werkkledij en een duidelijke planning, zodat je altijd weet wie er wanneer in huis is.</p></div>
               <span class="tag">Vaste planning, vaste ploeg</span>
               <button class="factor__toggle" type="button" aria-expanded="false" aria-label="Meer lezen"></button>
             </li>
             <li class="factor__row reveal">
-              <span class="factor__nr">03</span>
               <h3><em>Amai,</em> wat een afwerking.</h3>
               <div class="factor__more"><p>Alles begint bij een grondige voorbereiding: schuren, plamuren en afplakken. We werken met de beste materialen en controleren elke ruimte streng voor we opleveren. Premium kwaliteit, tot in het kleinste hoekje.</p></div>
               <span class="tag">Controle per ruimte</span>
               <button class="factor__toggle" type="button" aria-expanded="false" aria-label="Meer lezen"></button>
             </li>
             <li class="factor__row reveal">
-              <span class="factor__nr">04</span>
               <h3><em>Amai,</em> wat een service.</h3>
               <div class="factor__more"><p>Van het eerste gesprek tot de oplevering heb je één vaste contactpersoon die je project kent. Je krijgt een heldere offerte zonder kleine lettertjes en een snel antwoord op elke vraag.</p></div>
               <span class="tag">Eén vast aanspreekpunt</span>
               <button class="factor__toggle" type="button" aria-expanded="false" aria-label="Meer lezen"></button>
             </li>
             <li class="factor__row reveal">
-              <span class="factor__nr">05</span>
               <h3><em>Amai,</em> die denken aan alles.</h3>
               <div class="factor__more"><p>We dekken je meubels af, beschermen de vloeren en plakken alles netjes af. Na afloop zetten we alles terug en ruimen we op, zodat jij thuiskomt in een huis dat helemaal af is.</p></div>
               <span class="tag">Opgeruimd opgeleverd</span>
               <button class="factor__toggle" type="button" aria-expanded="false" aria-label="Meer lezen"></button>
             </li>
           </ol>
-          <div class="factor__close reveal">
-            <a class="btn btn--ink btn--lg" href="#offerte">Vraag je gratis offerte <span aria-hidden="true">→</span></a>
-          </div>
         </div>
       </div>
     </section>
@@ -150,7 +148,7 @@
             <p class="eyebrow reveal">Wat we doen</p>
             <h2 class="reveal">Onze schilder&shy;werken</h2>
           </div>
-          <p class="services__lead reveal"><strong>Fris een kamer op</strong>, geef je <strong>gevel meer uitstraling</strong> of maak je woning <strong>klaar voor verkoop</strong>. Moeiteloos, met onze professionele schilderwerken en een resultaat waarbij je zegt: <em>amai!</em></p>
+          <p class="services__lead reveal"><strong>Fris een kamer op</strong>, geef je <strong>gevel meer uitstraling</strong> of maak je woning <strong>klaar voor verkoop</strong>. Moeiteloos, met een resultaat waarbij je zegt: <em>amai!</em></p>
         </div>
         <div class="acc reveal">
           <article class="acc__item is-active" tabindex="0" style="--img:url('dienst-binnen.jpg?v=4'); --pos:center 35%; --tone:#0b2265">
@@ -189,7 +187,7 @@
     <section class="process" id="werkwijze">
       <div class="wrap">
         <div class="sec-head">
-          <p class="eyebrow reveal">Werkwijze</p>
+          <p class="eyebrow reveal">Hoe het werkt</p>
           <h2 class="reveal">Van aanvraag tot oplevering in vijf stappen.</h2>
         </div>
         <ol class="steps">
@@ -199,6 +197,22 @@
           <li class="reveal"><span>4</span><h3>Uitvoering</h3><p>Op de afgesproken dag starten we. Alles wordt beschermd, je blijft op de hoogte.</p></li>
           <li class="reveal"><span>5</span><h3>Oplevering</h3><p>Samen lopen we alles na. Pas als jij tevreden bent, is het voor ons af.</p></li>
         </ol>
+      </div>
+    </section>
+
+    <!-- ============ REALISATIES ============ -->
+    <section class="work" id="realisaties">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow reveal">Realisaties</p>
+          <h2 class="reveal">Een greep uit ons werk.</h2>
+        </div>
+        <div class="work__grid">
+          <figure class="work__item work__item--wide reveal"><img src="realisatie-woonkamer.jpg" alt="Woonkamer met groene accentwand" loading="lazy"><figcaption>Accentwand in de woonkamer</figcaption></figure>
+          <figure class="work__item reveal"><img src="realisatie-villa.jpg" alt="Wit geschilderde villa met oranje pannendak" loading="lazy"><figcaption>Gevel van een villa</figcaption></figure>
+          <figure class="work__item reveal"><img src="dienst-binnen.jpg" alt="Keuken en leefruimte in lichte tinten" loading="lazy"><figcaption>Keuken en leefruimte</figcaption></figure>
+          <figure class="work__item work__item--wide reveal"><img src="dienst-buiten.jpg" alt="Wit geschilderde gevel met donker schrijnwerk" loading="lazy"><figcaption>Gevel met donker schrijnwerk</figcaption></figure>
+        </div>
       </div>
     </section>
 
@@ -247,7 +261,7 @@
           <h2 class="reveal">Klaar voor je eigen <em>amai-moment?</em></h2>
           <p class="reveal">Vertel ons kort wat je wil laten schilderen. Je hoort van ons binnen de 24 uur.</p>
           <ul class="quote__contact reveal">
-            <li><span>Bel ons</span><a href="tel:+32000000000">+32 000 00 00 00</a></li>
+            <li><span>Bel ons</span><a href="tel:+32468352869">0468 35 28 69</a></li>
             <li><span>Mail ons</span><a href="mailto:info@amaischilderwerken.be">info@amaischilderwerken.be</a></li>
           </ul>
         </div>
@@ -289,12 +303,13 @@
           <h4>Navigatie</h4>
           <a href="#factor">De AMAI Factor</a>
           <a href="#diensten">Diensten</a>
-          <a href="#werkwijze">Werkwijze</a>
+          <a href="#werkwijze">Hoe het werkt</a>
+          <a href="#realisaties">Realisaties</a>
           <a href="#faq">FAQ</a>
         </div>
         <div>
           <h4>Contact</h4>
-          <a href="tel:+32000000000">+32 000 00 00 00</a>
+          <a href="tel:+32468352869">0468 35 28 69</a>
           <a href="mailto:info@amaischilderwerken.be">info@amaischilderwerken.be</a>
           <a href="#offerte">Gratis offerte</a>
         </div>
@@ -308,6 +323,6 @@
 
   <a class="sticky-cta" href="#offerte">Gratis offerte →</a>
 
-  <script src="script.js?v=14"></script>
+  <script src="script.js?v=15"></script>
 </body>
 </html>
